@@ -48,8 +48,8 @@ Thumbs.db
 
 #       CI           #
 ######################
-*/config
-*/user_guide
+/user_guide
+/config
 */config/development
 */logs/log-*.php
 */logs/!index.html
