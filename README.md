@@ -1,4 +1,4 @@
-ClinicaWeb
+Asistencias
 ==========
 
-Clínica Web 
+Sistema de asistencia para +Qweb
