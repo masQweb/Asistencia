@@ -25,7 +25,7 @@ class Login extends CI_Controller{
 			$result = $this->login_model->get_user($name, $password);
 
 			if ($result === true){
-
+				
 				redirect(base_url().'welcome');
 
 			}else{
@@ -39,7 +39,6 @@ class Login extends CI_Controller{
 
 	public function logout()
 	{
-		$this->session->sess_destroy();
 		redirect(base_url().'login');
 	}
 

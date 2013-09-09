@@ -6,16 +6,16 @@ class Login_model extends CI_Model {
 	{
 		$query = $this->db->get_where('users', array('username' => $name));
 
-		if ($query->num_rows() > 0 ) {
+		if ($query->num_rows() > 0) {
 
 			$query       = $query->row_array();
 			$user_name   = $query['username'];
 			$password_db = $query['password'];
+			$id_user     = $query['id'];
 
 			if($name === $user_name && $password === $password_db){
 
-				$userdata = array('username' => $user_name);
-				$this->session->set_userdata($userdata);
+				$this->_add_assistance($id_user);
 				return true;
 
 			} else {
@@ -25,6 +25,14 @@ class Login_model extends CI_Model {
 			}
 		}
 
+	}
+
+	private function _add_assistance ($id_user)
+	{
+		$date = date("Y-m-d H:i:s"); 
+		$this->db->set("users_id", $id_user);
+		$this->db->set("date", $date);
+		$this->db->insert("assistance");
 	}
 
 }
