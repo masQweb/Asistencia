@@ -4,6 +4,9 @@
 	 <?php
 	 	//echo '<p>'.$error_message.'</p>';
 	 	//echo validation_errors();
+	 	if (isset($error_menssage)){
+	 		echo '<p>'.$error_menssage.'</p>';
+	 	}
 	 	echo form_open();
 
 	 		echo form_label('Username : ');
@@ -27,6 +30,8 @@
 
 		 	echo form_password($data);
 		 	echo form_error('password');
+
+		 	echo "<a href=" . base_url() . "register>Registro</a><br />";
 
 		 	$data = array(
 		 		'name'  =>  'login',
