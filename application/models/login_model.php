@@ -34,8 +34,11 @@ class Login_model extends CI_Model {
 		$query = $this->db->get('assistance');
 
 		if ($query->num_rows() > 0) {
+
 			return false;
+
 		} else {
+
 			if ($type == 0){
 				$this->db->where('users_id'   , $id_user);
 		    	$this->db->where('YEAR(date)' , date("Y"));
@@ -52,6 +55,7 @@ class Login_model extends CI_Model {
 				}
 
 			}
+			
 			return true;
 		}
 
