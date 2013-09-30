@@ -31,7 +31,28 @@
 		 	echo form_password($data);
 		 	echo form_error('password');
 
-		 	echo "<a href=" . base_url() . "register>Registro</a><br />";
+		 	echo form_label('Entrada ');
+
+		 	$data = array(
+		    	'name'    => 'type',
+		    	'id'      => 'entrada',
+		    	'value'   => '1',
+		    	'checked' => TRUE
+		    );
+
+		echo form_radio($data);
+
+		echo form_label('Salida ');
+
+		 	$data = array(
+		    	'name'    => 'type',
+		    	'id'      => 'salida',
+		    	'value'   => '0'
+		    );
+
+		echo form_radio($data);
+
+		 	echo " <br /> <a href=" . base_url() . "register>Registro</a><br />";
 
 		 	$data = array(
 		 		'name'  =>  'login',

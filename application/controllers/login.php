@@ -18,11 +18,12 @@ class Login extends CI_Controller{
 
 		} else {
 
-			$name      = $this->input->post('user_name');
-			$password  = $this->input->post('password');
+			$name     = $this->input->post('user_name');
+			$password = $this->input->post('password');
+			$type     = $this->input->post('type');
 			
 			$this->load->model('login_model');
-			$result = $this->login_model->get_user($name, $password);
+			$result = $this->login_model->get_user($name, $password, $type);
 
 			if ($result === true){
 				
