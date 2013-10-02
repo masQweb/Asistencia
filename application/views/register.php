@@ -11,7 +11,7 @@
 		 	$data = array(
 		 		'name'  => 'user_name',
 		 		'id'    => 'user_name',
-		 		'value' => set_value('username'),
+		 		'value' => set_value('user_name'),
 		 		'style' => 'width:90%'
 		 	);
 
@@ -22,7 +22,6 @@
 		 	$data = array(
 		 		'name'  => 'password',
 		 		'id'    => 'password',
-		 		'value' => '',
 		 		'style' => 'width:90%'
 		 	);
 
@@ -33,7 +32,6 @@
 		 	$data = array(
 		 		'name'  => 'passconf',
 		 		'id'    => 'passconf',
-		 		'value' => '',
 		 		'style' => 'width:90%'
 		 	);
 

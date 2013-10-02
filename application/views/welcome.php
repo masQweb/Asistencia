@@ -5,6 +5,10 @@
 
 echo $title;
 echo '<br />';
-echo "Bienvendo";
+echo "Bienvenido";
 
 ?>
+
+<script>
+setTimeout ('window.location.assign("<?php echo base_url();?>")',3000);
+</script>

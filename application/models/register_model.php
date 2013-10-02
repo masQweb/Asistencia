@@ -10,6 +10,7 @@ class Register_model extends CI_Model {
 		$this->db->insert("users");
 
 		return true;
+		
 	}
 
 }
