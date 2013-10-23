@@ -5,6 +5,10 @@ class Login extends CI_Controller{
 	public function index()
 	{	
 	
+
+//	$this->load->model('login_model');
+//	print_r($this->login_model->prueba_hora());
+//exit();
 		$this->form_validation->set_rules('user_name', 'Username', 'strip_tags|trim|valid_email|required|xss_clean');
 		$this->form_validation->set_rules('password', 'Password', 'strip_tags|trim|required|md5');
 

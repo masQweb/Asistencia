@@ -23,6 +23,11 @@ class Login_model extends CI_Model {
 		}
 	}
 
+	public function prueba_hora(){
+		$query = $this->db->get_where('assistance',array('users_id'=> 4));
+		return $query->result_array();
+	}
+
 	private function _validate_entry_output ($id_user, $type)
 	{	
 		$this->db->where('users_id'   , $id_user);
